@@ -2,17 +2,11 @@ import unittest
 
 class TestString(unittest.TestCase):
 
-    def test_string_a(self):
+    def test_multiple_string_method(self):
         self.assertEqual('a'*5, 'aaaaa')
-    
-    def test_upper(self):
         self.assertEqual('foo'.upper(), 'FOO')
-    
-    def test_isupper(self):
         self.assertTrue('MOO'.isupper())
         self.assertFalse('Moo'.isupper())
-
-    def test_strip(self):
         self.assertEqual('  hello  '.strip(), 'hello')
         self.assertEqual('monster'.strip('mon'), 'ster')
 
