@@ -52,3 +52,6 @@ class TestPrime(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+# python -m unittest test_prime.py --> Just show the result
+# python test_prime.py -v --> show results of each function
