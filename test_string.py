@@ -66,12 +66,14 @@ class TestObjectInstance(unittest.TestCase):
 
     def test_object_isInstance(self):
         objectName = TestClass()
-        message = "Given object is an instance of TestClass."
+        # Error message in case test case failed
+        message = f"Given object {TestClass.x} is an instance of TestClass."
         self.assertIsInstance(objectName, TestClass, message)
 
     def test_object_notIsInstance(self):
         objectName = TestClass()
-        message = "Given object is not an instance of TestClass."
+        # Error message in case test case failed
+        message = f"Given object {TestClass_minor.x} is not an instance of TestClass."
         self.assertNotIsInstance(objectName, TestClass_minor, message)
 
 class TestNotAlmostEqual(unittest.TestCase):
@@ -101,6 +103,21 @@ class TestNotAlmostEqual(unittest.TestCase):
 
         self.assertAlmostEqual(first_num, second_num, None, message1, delta1)
         self.assertNotAlmostEqual(first_num, second_num, None, message2, delta2)
+
+from mix_number import square, cube
+class TestPoweringNumber(unittest.TestCase): 
+    def test_pos_square(self):
+        self.assertEqual(square(2), 4)
+ 
+    def test_pos_cube(self):
+        self.assertEqual(cube(2), 8)
+
+    def test_neg_square(self):
+        self.assertNotEqual(square(2.1), 4, "Square of 2.1 is not equal to 4")
+ 
+    def test_neg_cube(self):
+        with self.assertRaises(TypeError):
+            cube('abc')
 
 if __name__ == '__main__':
     unittest.main()

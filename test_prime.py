@@ -1,7 +1,7 @@
 import unittest
 
 from prime_number import is_prime
-from add_number import add
+from mix_number import add
 
 class TestPrime(unittest.TestCase):
 
