@@ -13,7 +13,8 @@ class TestEtlExample1Process(unittest.TestCase):
         # Here we are testing the length of the dataframe (col)
         self.assertEqual(len(df), 5)
         # Here we are testing the existing of a dataframe
-        self.assertIsInstance(self.df, pd.DataFrame)
+        message = "The object extracted from extract_data() is not a pandas DataFrame as expected"
+        self.assertIsInstance(self.df, pd.DataFrame, message)
         # Here we are testing the column names
         important_columns = ["name", "salary", "has_car"]
         for col in important_columns:
