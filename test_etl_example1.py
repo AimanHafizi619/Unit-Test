@@ -18,13 +18,11 @@ class TestEtlExample1Process(unittest.TestCase):
         # Here we are testing the column names
         important_columns = ["name", "salary", "has_car"]
         for col in important_columns:
-            self.assertIn(col, df.columns, f"Column '{col}' should be present")
+            self.assertIn(col, df.columns, f"Column '{col}' should be present in the Dataframe")
 
     def test_transform_data(self):
         # Here we are testing the value of average salary and the filtered data
         avg_salary, filtered_data = transform_data(self.df)
-        # Here we are testing the average salary
-        self.assertAlmostEqual(avg_salary, 750)
         # Here we are testing the length of the filtered data
         decimalPlace = 2
         message = "Calculated Average Salary and Manual Average Salary are almost not equal."
