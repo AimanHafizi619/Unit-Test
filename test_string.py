@@ -76,6 +76,14 @@ class TestObjectInstance(unittest.TestCase):
         message = f"Given object {TestClass_minor.x} is not an instance of TestClass."
         self.assertNotIsInstance(objectName, TestClass_minor, message)
 
+class TestObjectValue(unittest.TestCase):
+    def test_neg_object_value(self):
+        first_num = TestClass()
+        second_num = TestClass()
+        # Error message in case test case failed
+        message = f"First number, {first_num.x} and second num, {second_num.x} is not evaluated to the same object."
+        self.assertIsNot(first_num,second_num, message)
+
 class TestNotAlmostEqual(unittest.TestCase):
     
     def test_count_decimalPlace(self):
