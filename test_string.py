@@ -127,5 +127,17 @@ class TestPoweringNumber(unittest.TestCase):
         with self.assertRaises(TypeError):
             cube('abc')
 
+class TestLessOrGreaterValue(unittest.TestCase):
+    def test_greater_value(self):
+        first_num = 6
+        second_num = 5
+        message = "\nError: First number is less than the second number."
+        self.assertGreater(first_num, second_num, message)
+
+    def test_less_value(self):
+        first_num = 6
+        second_num = 7
+        message = "\nError: First number is greater than the second number."
+        self.assertLess(first_num, second_num, message)
 if __name__ == '__main__':
     unittest.main()
