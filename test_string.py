@@ -139,5 +139,20 @@ class TestLessOrGreaterValue(unittest.TestCase):
         second_num = 7
         message = "\nError: First number is greater than the second number."
         self.assertLess(first_num, second_num, message)
+
 if __name__ == '__main__':
     unittest.main()
+
+'''
+    To run only 1 test case, use this command:
+    python -m unittest test_string.TestPoweringNumber.test_neg_square
+
+    To run all test cases and show all result only, use this command:
+    python -m unittest test_prime.py
+
+    To run all test cases and activate verbose, use this command:
+    python test_prime.py -v
+
+    To run all test cases and record the time, use this command:
+    python test_prime.py -q
+'''
