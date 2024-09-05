@@ -12,6 +12,7 @@ def extract_data():
 
 def transform_data(df):
     avg_salary = df["salary"].mean()
+    df["average_salary"] = avg_salary
     filtered_data = df[df["has_car"] == True]
     return avg_salary, filtered_data
 

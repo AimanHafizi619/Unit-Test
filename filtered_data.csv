@@ -1,0 +1,4 @@
+name,age,salary,has_car,has_house,average_salary
+Alice,30,700,True,True,750.0
+Charlie,35,800,True,False,750.0
+David,40,1200,True,True,750.0
